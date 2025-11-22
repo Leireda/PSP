@@ -1,33 +1,39 @@
 package main;
 
-public class Liebre {
+public class Liebre extends Animal{
 	
-	private String nombre; 
 	private int velocidad = 5; 
-	private int posicion; 
-	private  int caminar; 
+	private int posicion = 0; 
+	private  int caminar = 0; 
+	private int quieta; 
 	
 	public Liebre(String nombre) {
-		super(); 
+		super(nombre); 
 	}
 	
 	public int getPosicion() {
 		return posicion; 
-		
-		
 	}
 	
 	
 	public void posicion() {
 		
 		if(caminar != 4) {
-			posicion++; 
-			System.out.println("la liebre" + posicion + "camina tantos" + caminar + "metros"); 
+			posicion = posicion + velocidad; 
+			System.out.println(" la liebre " + nombre + "  avanza " + this.posicion + " metros "); 
+			caminar++; 
+			quieta = 10; 
+			
 		} 
 		
-		else if(caminar == 10) {
-			posicion--; 
-			System.out.println("la liebre" + posicion + "esta quieta"); 
+		else if(caminar == 4) {
+			System.out.println(" la liebre " + nombre + " esta quieta " + quieta + " segundos ");
+			quieta--; 
+			
+			if(quieta == 0) {
+				caminar = 0; 
+			}
+			
 		} 
 		
 	}

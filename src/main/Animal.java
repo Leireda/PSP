@@ -2,7 +2,7 @@ package main;
 
 public abstract class Animal {
 
-	private  String nombre;
+	protected  String nombre;
 
 	public Animal(String nombre) {
 		super();

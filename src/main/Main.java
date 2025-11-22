@@ -8,11 +8,11 @@ public class Main {
 		Tunel tunel = new Tunel(); 
 	 
 		Thread tortuga = new Thread (new Carrera(tunel, new Tortuga("tortuga"))); 
-		Thread liebre = new Thread (new Carrera(tunel, new Tortuga("tortuga"))); 
-		Thread pajaro = new Thread (new Carrera(tunel, new Tortuga("tortuga"))); 
+		Thread liebre = new Thread (new Carrera(tunel, new Liebre("Liebre"))); 
+		Thread pajaro = new Thread (new Carrera(tunel, new Pajaro("pajaro"))); 
 		
-		tortuga.start();
-		liebre.start();
+		//tortuga.start();
+		//liebre.start();
 		pajaro.start();
 		
 	}
